@@ -1,0 +1,30 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #121212;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+#messages {
+  background: #1f1f1f;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+input, select, button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin: 5px;
+}
+
+button {
+  background: #00bcd4;
+  color: white;
+  cursor: pointer;
+}
