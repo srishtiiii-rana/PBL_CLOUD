@@ -13,12 +13,14 @@ body {
 
 .container {
   width: 400px;
-  background: #18171d;
+  background: rgba(20, 18, 25, 0.95);
   padding: 30px;
   border-radius: 18px;
-  box-shadow: 0 0 30px rgba(128, 0, 255, 0.25);
+  box-shadow: 0 0 30px rgba(128, 0, 255, 0.35);
   text-align: center;
   animation: fadeIn 0.6s ease;
+  z-index: 2;
+  position: relative;
 }
 
 h1 {
@@ -42,6 +44,8 @@ select, input, button {
   margin: 6px 0;
   font-size: 0.95rem;
   width: 100%;
+  position: relative;
+  z-index: 3;
 }
 
 select {
@@ -73,6 +77,8 @@ button:hover {
   text-align: left;
   font-size: 0.95rem;
   box-shadow: inset 0 0 10px rgba(90, 60, 140, 0.3);
+  z-index: 1;
+  position: relative;
 }
 
 #messages p {
@@ -88,12 +94,16 @@ button:hover {
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  position: relative;
+  z-index: 3;
 }
 
 #msg {
   flex: 1;
-  background: #25232b;
-  color: #eee;
+  background: #2a2633;
+  color: #f5e9ff;       /* <-- Visible lavender text */
+  caret-color: #b88cff; /* <-- Purple blinking cursor */
+  font-size: 0.95rem;
 }
 
 #msg::placeholder {
@@ -120,4 +130,15 @@ button:hover {
 }
 #messages::-webkit-scrollbar-track {
   background: transparent;
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+  #messages {
+    height: 250px;
+  }
 }
