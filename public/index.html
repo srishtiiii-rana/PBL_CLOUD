@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anonymoid Chat</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1>💬 Anonymoid Chat Rooms</h1>
-    <div id="join">
-      <label>Select a topic:</label>
+
+    <div id="join" class="join-box">
+      <label for="room">Select a topic:</label>
       <select id="room">
         <option>AI</option>
         <option>Movies</option>
@@ -21,10 +22,12 @@
       <button id="joinBtn">Join Chat</button>
     </div>
 
-    <div id="chat" style="display:none;">
+    <div id="chat" class="chat-box" style="display:none;">
       <div id="messages"></div>
-      <input id="msg" placeholder="Type your message..." autocomplete="off"/>
-      <button id="sendBtn">Send</button>
+      <div class="input-row">
+        <input id="msg" placeholder="Type your message..." autocomplete="off"/>
+        <button id="sendBtn">Send</button>
+      </div>
     </div>
   </div>
 
